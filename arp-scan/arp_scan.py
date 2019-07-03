@@ -5,7 +5,12 @@ Created on 1 jul. 2019
 '''
 
 import sys
-from scapy.all import Ether, ARP, srp
+from scapy.all import Ether, ARP, srp 
+import os
+
+print("ARP SCAN with python")
+print ("eth0 = Intel(R) 82579LM Gigabit Network Connection")
+print ("wlan0 = Intel(R) Centrino(R) Advanced-N 6205")
 
 def main():
     _range = raw_input("Enter the Target Range: ")
@@ -27,6 +32,8 @@ def main():
 if __name__ == "__main__":
     try:
         main()
+        print("Script finished")
+        os.system("PAUSE")
     except KeyboardInterrupt:
         print "CTRL+C pressed. Exiting. "
         sys.exit(0)
